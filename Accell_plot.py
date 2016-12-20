@@ -20,11 +20,9 @@ def filterOrder1( mylist ):
    mylistF1= [0.0] * len(mylist)
    mylistF1[0]=  (mylist[0])
 
-   #◘ treatement for Acc X
+   # treatement for Acc X
    for i in range(1, len(mylist)-1):
-#    print("i= ", i)
-#    print("accxF1[i-1] ", accxF1[i-1])
-#    print("accx[i] ", accx[i])
+
         mylistF1[i]= (F1param1*mylistF1[i-1]) + ((1-F1param1)*mylist[i])
    
    return mylistF1;
@@ -40,7 +38,8 @@ def avg10( mylist ):
 # Import data
 #==============================================================================
 style.use('ggplot')
-path="Data/RecACC_20161214193205.txt"
+path="Data/RecACC_20161218193156.txt"
+#path="Data/RecACC_20161214193205.txt"
 
 time= np.loadtxt(path,
                  delimiter = ',',
